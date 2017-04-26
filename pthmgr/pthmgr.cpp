@@ -6,6 +6,18 @@
 #include <iostream>
 #include <editenv.hpp>
 
+void inline add_path(std::string &folder) {
+	pathAdd(editenv::es_user, folder.c_str());
+	pathAdd(editenv::es_system, folder.c_str());
+	std::cout << "Added '" + folder + "' to path." << std::endl;
+}
+
+void inline remove_path(std::string &folder) {
+	pathRemove(editenv::es_user, folder.c_str());
+	pathRemove(editenv::es_system, folder.c_str());
+	std::cout << "Removed '" + folder + "' from path." << std::endl;
+}
+
 int main(int argc, char* argv[]) {
 	std::string command, folder;
 	if (argc < 2) {
@@ -15,14 +27,10 @@ int main(int argc, char* argv[]) {
 		command = argv[1];
 		folder = argv[2];
 		if (command == "add") {
-			pathAdd(editenv::es_user, folder.c_str());
-			pathAdd(editenv::es_system, folder.c_str());
-			std::cout << "Added '" + folder + "' to path." << std::endl;
+			add_path(folder);
 		}
 		else if(command == "remove") {
-			pathRemove(editenv::es_user, folder.c_str());
-			pathRemove(editenv::es_system, folder.c_str());
-			std::cout << "Removed '" + folder + "' from path." << std::endl;
+			remove_path(folder);
 		}
 	}
 	return 0;
