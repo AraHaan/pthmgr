@@ -24,11 +24,15 @@
 #ifndef EDITENV_EDITENV_HPP
 #define EDITENV_EDITENV_HPP
 
+#ifdef EDITENV_STATIC
+#define EDITENV_API /* For static linkage to work. */
+#else
 #ifdef EDITENV_BUILD
 #define EDITENV_API __declspec(dllexport)
 #else
 #define EDITENV_API __declspec(dllimport)
 #endif // EDITENV_BUILD
+#endif // EDITENV_STATIC
 
 #include "editenvTypes.hpp"
 #include "EnvVar.hpp"

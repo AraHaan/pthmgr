@@ -24,11 +24,15 @@
 #ifndef EDITENV_EDITENV_TYPES_HPP
 #define EDITENV_EDITENV_TYPES_HPP
 
+#ifdef EDITENV_STATIC
+#define EDITENV_API
+#else
 #ifdef EDITENV_BUILD
 #define EDITENV_API __declspec(dllexport)
 #else
 #define EDITENV_API __declspec(dllimport)
 #endif // EDITENV_BUILD
+#endif // EDITENV_STATIC
 
 namespace editenv {
     // Possible environment variable scopes:

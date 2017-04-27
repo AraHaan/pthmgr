@@ -1,6 +1,9 @@
 Debug
 Release
+ReleaseStatic
 *.aps
 *.ncb
 *.suo
+*.sdf
 *.vcproj.*.*.user
+*.vcxproj.user

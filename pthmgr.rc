@@ -12,12 +12,12 @@ BEGIN
 		BLOCK "040904b0"
 		BEGIN
 			VALUE "FileDescription", "Windows(R) Path Environment Variable Manager"
-			VALUE "FileVersion", "0.0.2a0"
+			VALUE "FileVersion", "0.0.2"
 			VALUE "InternalName", "pthmgr"
 			VALUE "LegalCopyright", "Copyright (C) 2017"
 			VALUE "OriginalFilename", "pthmgr.exe"
 			VALUE "ProductName", "Windows(R) Path Environment Variable Manager"
-			VALUE "ProductVersion", "0.0.2a0"
+			VALUE "ProductVersion", "0.0.2"
 		END
 	END
 	BLOCK "VarFileInfo"
