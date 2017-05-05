@@ -6,6 +6,7 @@
 #include <iostream>
 #define EDITENV_STATIC
 #include <editenv.hpp>
+#include "versioninfo.hpp"
 
 void inline add_path(const char* folder) {
 	pathAdd(editenv::es_user, folder);
@@ -22,7 +23,9 @@ void inline remove_path(const char* folder) {
 int main(int argc, char* argv[]) {
 	std::string command;
 	if (argc < 2) {
-		std::cout << "Windows(R) Path Environment Variable Manager\nUsage:\n    pthmgr add <folder>\n    pthmgr remove <folder>" << std::endl;
+		std::cout << PTHMGR_DESCRIPTION << " v" << PTHMGR_VERSION
+			<< "\nUsage:\n    " << INTERNAL_NAME << " add <folder>\n    "
+			<< INTERNAL_NAME << " remove <folder>" << std::endl;
 	}
 	else {
 		command = argv[1];

@@ -172,6 +172,9 @@
   <ItemGroup>
     <ResourceCompile Include="pthmgr.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="versioninfo.hpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
