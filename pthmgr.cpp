@@ -3,7 +3,7 @@
 
 	Windows path environment variable command line manager.
 */
-#include <iostream>
+#include <string>
 #include "pathstuff.hpp"
 
 
