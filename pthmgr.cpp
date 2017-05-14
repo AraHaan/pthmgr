@@ -10,9 +10,7 @@
 int main(int argc, char* argv[]) {
 	std::string command;
 	if (argc < 2) {
-		std::cout << PTHMGR_DESCRIPTION << " v" << PTHMGR_VERSION
-			<< "\nUsage:\n    " << INTERNAL_NAME << " add <folder>\n    "
-			<< INTERNAL_NAME << " remove <folder>" << std::endl;
+		show_usage();
 	} else {
 		command = argv[1];
 		if (command == "add") {
