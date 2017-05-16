@@ -1,6 +1,7 @@
 Debug
 Release
 ReleaseStatic
+DebugStatic
 *.aps
 *.ncb
 *.suo

@@ -13,7 +13,7 @@
 
 /* Main version info things. */
 #define PTHMGR_DESCRIPTION "Windows(R) Path Environment Variable Manager"
-#define PTHMGR_VERSION "0.0.4a0"
+#define PTHMGR_VERSION "0.0.4"
 #define INTERNAL_NAME "pthmgr"
 #define LEGAL_COPYRIGHT "Copyright (C) 2017"
 #define ORIGINAL_FILENAME "pthmgr.exe"

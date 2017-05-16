@@ -1,5 +1,5 @@
 /*
-path environment variable shortcut functions for pthmgr.
+	path environment variable shortcut functions for pthmgr.
 */
 #include <iostream>
 #define EDITENV_STATIC
