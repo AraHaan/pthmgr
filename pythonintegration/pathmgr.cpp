@@ -11,7 +11,7 @@
  * by default.
  *
  * I would have named the file as an *.c file
- * however the dependencies to pyhmgr uses namespaces
+ * however the dependencies to pthmgr uses namespaces
  * that is only availible with c++ without it actually
  * checking if compiling for c++ first.
  * I would love to change it but I really should not
