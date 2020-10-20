@@ -52,4 +52,4 @@ jobs:
         shell: cmd
 
       - name: Building pthmgr.
-        run: msbuild.exe pthmgr.sln -Configuration Release
+        run: msbuild.exe pthmgr.sln -p:Configuration=Release
