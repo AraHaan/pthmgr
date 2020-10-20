@@ -21,26 +21,25 @@
 #include <Python.h> /* for python's C API's*/
 #ifdef _WIN32
   /*
-   * These are only supported on Windows I think so far.
+   * These are only supported on Windowss so far.
    */
-  #define EDITENV_STATIC
   #include <editenv.hpp>
 
   /*
    * Helper functions for the C Python extension modules.
    */
-  void add_path(const char* folder) {
+  extern "C" void add_path(const char* folder) {
 	  pathAdd(editenv::es_user, folder);
 	  pathAdd(editenv::es_system, folder);
   }
 
-  void remove_path(const char* folder) {
+  extern "C" void remove_path(const char* folder) {
 	  pathRemove(editenv::es_user, folder);
 	  pathRemove(editenv::es_system, folder);
   }
 #endif
 
-static PyObject *
+extern "C" static PyObject *
 pathmgr_add_path(PyObject *self, PyObject *args)
 {
   const char *path;
@@ -53,7 +52,7 @@ pathmgr_add_path(PyObject *self, PyObject *args)
   Py_RETURN_NONE;
 }
 
-static PyObject *
+extern "C" static PyObject *
 pathmgr_remove_path(PyObject *self, PyObject *args)
 {
   const char *path;
@@ -67,12 +66,12 @@ pathmgr_remove_path(PyObject *self, PyObject *args)
 }
 
 static PyMethodDef pathmgr_methods[] = {
-  {"add_path", consoletitle, METH_VARARGS,
+  {"add_path", pathmgr_add_path, METH_VARARGS,
    "Adds the specified path into Window's PATH"
    " Environment variable and broadcasts this"
    " change to Python automatically. On"
    " non-windows systems this simply returns None only."},
-  {"remove_path", consolesize, METH_VARARGS,
+  {"remove_path", pathmgr_remove_path, METH_VARARGS,
    "Removes the specified path from Window's PATH"
    " Environment variable and broadcasts this"
    " change to Python automatically. On"
@@ -93,8 +92,8 @@ static struct PyModuleDef pathmgrmodule = {
   pathmgr_methods
 };
 
-PyMODINIT_FUNC
-PyInit_pathmgrmodule(void)
+extern "C" PyMODINIT_FUNC
+PyInit_pathmgr(void)
 {
   PyObject* m;
   

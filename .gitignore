@@ -8,3 +8,8 @@ DebugStatic
 *.sdf
 *.vcproj.*.*.user
 *.vcxproj.user
+.vs
+
+# python extension module auto generated stuff.
+build/
+dist/
