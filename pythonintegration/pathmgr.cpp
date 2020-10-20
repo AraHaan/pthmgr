@@ -17,6 +17,7 @@
  * I would love to change it but I really should not
  * change the dependencies myself at all really.
  */
+#define PY_SSIZE_T_CLEAN
 #include <Python.h> /* for python's C API's*/
 #ifdef _WIN32
   /*
