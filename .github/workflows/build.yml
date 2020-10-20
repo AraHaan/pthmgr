@@ -16,6 +16,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: setup-msbuild
+        uses: microsoft/setup-msbuild@v1
 
       - name: Building pthmgr.
         run: msbuild.exe pthmgr.sln
