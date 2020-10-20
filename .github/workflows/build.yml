@@ -24,8 +24,7 @@ jobs:
           architecture: 'x64'
 
       - name: Building pthmgr.
-        run: msbuild.exe pthmgr.sln
-        continue-on-error: true
+        run: msbuild.exe pthmgr.sln -Configuration Release
 
       - name: Building Python Extension (x64).
         run: python setup.py build
