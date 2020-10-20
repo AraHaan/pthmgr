@@ -23,6 +23,17 @@ jobs:
           python-version: '3.9'
           architecture: 'x64'
 
+      - name: Building Python Extension (x64).
+        run: python setup.py build
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+          architecture: 'x86'
+
+      - name: Building Python Extension (x86).
+        run: python setup.py build
+
       - name: Install vcexpress2010
         run: choco install vcexpress2010
 
@@ -41,13 +52,3 @@ jobs:
 
       - name: Building pthmgr.
         run: msbuild.exe pthmgr.sln -Configuration Release
-
-      - name: Building Python Extension (x64).
-        run: python setup.py build
-
-      - uses: actions/setup-python@v2
-        with:
-          python-version: '3.9'
-          architecture: 'x86'
-      - name: Building Python Extension (x86).
-        run: python setup.py build
