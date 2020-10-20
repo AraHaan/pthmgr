@@ -18,9 +18,14 @@ jobs:
       - uses: actions/checkout@v2
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+          architecture: 'x64'
 
       - name: Building pthmgr.
         run: msbuild.exe pthmgr.sln
+        continue-on-error: true
 
       - name: Building Python Extension.
         run: python setup.py build
