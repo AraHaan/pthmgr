@@ -3,7 +3,7 @@
  * that can automatically add folders to
  * the PATH environment variable on windows.
  * Because of this I decided to also provide
- * code bindings that my pyhmgr also uses so
+ * code bindings that my pthmgr also uses so
  * that way one can achive the same results
  * as using pthmgr, however with it auto
  * modifying the path environment of python as
