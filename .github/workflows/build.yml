@@ -22,22 +22,20 @@ jobs:
           architecture: 'x64'
 
       - name: Building Python Extension (x64).
-        run: setup.py build
-        shell: python
+        run: python setup.py build
 
   build_python39x86:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v2'
+      - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
           python-version: '3.9'
           architecture: 'x86'
 
       - name: Building Python Extension (x86).
-        run: setup.py build
-        shell: python
+        run: python setup.py build
 
   build:
     runs-on: windows-latest
