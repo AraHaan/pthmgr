@@ -11,6 +11,240 @@ on:
     branches: [master]
 
 jobs:
+  build_python30x64:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.0'
+          architecture: 'x64'
+
+      - name: Building Python Extension (x64).
+        run: python setup.py build
+
+  build_python30x86:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.0'
+          architecture: 'x86'
+
+      - name: Building Python Extension (x86).
+        run: python setup.py build
+
+  build_python31x64:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.1'
+          architecture: 'x64'
+
+      - name: Building Python Extension (x64).
+        run: python setup.py build
+
+  build_python31x86:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.1'
+          architecture: 'x86'
+
+      - name: Building Python Extension (x86).
+        run: python setup.py build
+
+  build_python32x64:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.2'
+          architecture: 'x64'
+
+      - name: Building Python Extension (x64).
+        run: python setup.py build
+
+  build_python32x86:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.2'
+          architecture: 'x86'
+
+      - name: Building Python Extension (x86).
+        run: python setup.py build
+
+  build_python33x64:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.3'
+          architecture: 'x64'
+
+      - name: Building Python Extension (x64).
+        run: python setup.py build
+
+  build_python33x86:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.3'
+          architecture: 'x86'
+
+      - name: Building Python Extension (x86).
+        run: python setup.py build
+
+  build_python34x64:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.4'
+          architecture: 'x64'
+
+      - name: Building Python Extension (x64).
+        run: python setup.py build
+
+  build_python34x86:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.4'
+          architecture: 'x86'
+
+      - name: Building Python Extension (x86).
+        run: python setup.py build
+
+  build_python35x64:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.5'
+          architecture: 'x64'
+
+      - name: Building Python Extension (x64).
+        run: python setup.py build
+
+  build_python35x86:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.5'
+          architecture: 'x86'
+
+      - name: Building Python Extension (x86).
+        run: python setup.py build
+
+  build_python36x64:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.6'
+          architecture: 'x64'
+
+      - name: Building Python Extension (x64).
+        run: python setup.py build
+
+  build_python36x86:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.6'
+          architecture: 'x86'
+
+      - name: Building Python Extension (x86).
+        run: python setup.py build
+
+  build_python37x64:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+          architecture: 'x64'
+
+      - name: Building Python Extension (x64).
+        run: python setup.py build
+
+  build_python37x86:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+          architecture: 'x86'
+
+      - name: Building Python Extension (x86).
+        run: python setup.py build
+
+  build_python38x64:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          architecture: 'x64'
+
+      - name: Building Python Extension (x64).
+        run: python setup.py build
+
+  build_python38x86:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          architecture: 'x86'
+
+      - name: Building Python Extension (x86).
+        run: python setup.py build
+
   build_python39x64:
     runs-on: windows-latest
 
