@@ -35,6 +35,11 @@ jobs:
       matrix:
         architecture: [x86, x64]
         build-platform: [Win32, x64]
+        exclude:
+          - architecture: x86
+            build-platform: x64
+          - architecture: x64
+            build-platform: Win32
 
     steps:
       - uses: actions/checkout@v2
