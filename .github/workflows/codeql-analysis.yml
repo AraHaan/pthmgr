@@ -48,11 +48,13 @@ jobs:
         # Prefix the list here with "+" to use these queries and those in the config file.
         # queries: ./path/to/local/query, your-org/your-repo/queries@main
 
-    # try to make autobuild work.
-    - name: Install vcexpress2010
+    - if: ${{ matrix.language }} == 'cpp'
+      # try to make autobuild work.
+      name: Install vcexpress2010
       run: choco install vcexpress2010
 
-    - name:  Setup Environment
+    - if: ${{ matrix.language }} == 'cpp'
+      name:  Setup Environment
       run:   |
            echo "{C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE}" >> $GITHUB_PATH
            echo "{C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\BIN}" >> $GITHUB_PATH
@@ -61,7 +63,9 @@ jobs:
            echo "{LIB}={C:\Program Files (x86)\Microsoft SDKs\Windows\v6.0A\Lib;%LIB%}" >> $LIB
            echo "{LIB}={C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Lib;%LIB%}" >> $LIB
            echo "{INCLUDE}={C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include;%INCLUDE%}" >> $INCLUDE
-    - name:  Start VCTools (VS2010)
+
+    - if: ${{ matrix.language }} == 'cpp'
+      name:  Start VCTools (VS2010)
       run: call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat" ${{ matrix.architecture }}
       shell: cmd
 
