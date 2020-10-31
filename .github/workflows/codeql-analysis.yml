@@ -48,7 +48,7 @@ jobs:
         # Prefix the list here with "+" to use these queries and those in the config file.
         # queries: ./path/to/local/query, your-org/your-repo/queries@main
 
-    # try to make autbuild work.
+    # try to make autobuild work.
     - name: Install vcexpress2010
       run: choco install vcexpress2010
 
