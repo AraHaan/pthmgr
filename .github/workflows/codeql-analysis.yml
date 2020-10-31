@@ -51,7 +51,9 @@ jobs:
     - if: ${{ matrix.language }} == 'cpp'
       # try to make autobuild work.
       name: Install vcexpress2010
-      run: choco install vcexpress2010
+      # run: choco install vcexpress2010
+      run: Install-ChocolateyPackage 'vcexpress2010' 'exe' '/quiet /full /norestart' 'http://download.microsoft.com/download/1/D/9/1D9A6C0E-FC89-43EE-9658-B9F0E3A76983/vc_web.exe'
+      shell: powershell
 
     - if: ${{ matrix.language }} == 'cpp'
       name:  Setup Environment
