@@ -50,8 +50,8 @@ jobs:
 
     - if: ${{ matrix.language }} == 'cpp'
       # try to make autobuild work.
-      name: Install vcexpress2010
-      run: choco install vcexpress2010full --source="./"
+      name: Install vcultimate2010
+      run: choco install vcultimate2010full --source="./"
 
     - if: ${{ matrix.language }} == 'cpp'
       name:  Setup Environment
