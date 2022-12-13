@@ -4,7 +4,7 @@ Source Code to Windows Path Manager.
 
 ### Dependencies
 
-This repository shops with the dependency ``editenv``.
+This repository ships with the dependency ``editenv``.
 
 ### To Build
 
